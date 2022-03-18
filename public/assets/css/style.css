@@ -1,0 +1,27 @@
+
+.fonts3{
+    font-family: 'Nunito Sans', sans-serif !important;
+
+}
+.pointer {
+    cursor: pointer;
+}
+.logoImageDavid{
+    max-width: 18% !important;
+}
+
+@media(min-width:992px){
+    .cascading-right {
+        margin-right: -50px;
+    }
+
+    .rotate-lg-6 {
+        transform: rotate(6deg);
+    }
+    
+}
+@media(max-width:991px){
+    .logoImageDavid{
+        max-width: 48% !important;
+    }
+}
