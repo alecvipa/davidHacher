@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="2dtfi3kofxydcglrs1ukucybyaxvii" />
+    <meta name="description" content="Asesoria y consultoria de servicios profesionales.">
+    <meta name="keywords"
+        content="Consultoría empresarial, Consultoría estratégica , Empresa de consultoría , Consultoría financiera, Consultoría administrativa , Servicios de consultoría , Consultoría especializada">
+    <title>Consulting Jofer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/28f081bff3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a077a0470e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="shortcut icon" href="assets/images/logoCapital.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <!-- MDB -->
+    <link rel="stylesheet" href="/assets/css/mdb.min.css" />
+
+    <script>
+        function submitEmailForm(form) {
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value }));
+            alert("¡En breve te contactaremos!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+</head>
+
+<body class="fonts3" data-spy="scroll" data-target="#lashistaItemLandingPage" data-offset="0">
+
+    <div class="bodyPrincipal">
+        {{{body}}}
+    </div>
+    {{!-- FOOTER STARTS --}}
+    <div id="footer-wrap" class="is-clearfix paraFont" style="border-top: 1px solid #f3f3f3; padding: 60px 0 60px">
+        <footer id="footer" class="site-footer">
+            <div id="footer-inner" class="site-footer-inner container">
+                <div class="row">
+                    <div class="col-md-8" style="display: flex; flex-wrap: wrap">
+                        <div class="align-logo-footer" style="display: inline-block">
+                            <a href="/">
+                                <img src="assets/images/logoNegro.png" style="width: 207px; height: auto" alt=""
+                                    class="imgLogoFooter">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 right-footer">
+
+
+                        {{!-- <a href="#" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-facebook fa-footer"></i>
+                            </span>
+                        </a>
+                        <a href="#" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-instagram fa-footer"></i>
+                            </span>
+                        </a> --}}
+                        <a href="tel:+525559196756" target="_blank">
+                            <span class="icon">
+                                <i class="fas fa-phone-square-alt fa-footer colorBlack"></i>
+                            </span>
+                        </a>
+                        <a href="mailto:info@grupocapitalsatelite.com" target="_blank">
+                            <span class="icon">
+                                <i class="fas fa-envelope fa-footer colorBlack"></i>
+                            </span>
+                        </a>
+
+                        <p><b>Consulting Jofer S.de R.L. de C.V.</b> Todos los derechos reservados. Sus datos están
+                            protegidos por
+                            la ley de privacidad. <span><a href="/privacidad" style="color: gray;">Visita nuestra
+                                    política de privacidad</a></span></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- #footer -->
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
