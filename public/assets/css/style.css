@@ -1,6 +1,6 @@
 
 .fonts3{
-    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important; 
 
 }
 .pointer {
@@ -9,7 +9,25 @@
 .logoImageDavid{
     max-width: 18% !important;
 }
-
+.serviciosDiv{
+    margin-top: -7%;
+}
+.valueProposition{
+    margin-top: -3%;
+}
+.spaceDivSastre{
+    height: 16rem;
+    background-image: url("/assets/images/sastre.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlaySastre{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding-top: 3%;
+}
 @media(min-width:992px){
     .cascading-right {
         margin-right: -50px;
@@ -23,5 +41,11 @@
 @media(max-width:991px){
     .logoImageDavid{
         max-width: 48% !important;
+    }
+    .serviciosDiv{
+        margin-top: -31%;
+    }
+    .valueProposition{
+        margin-top: -45%;
     }
 }
