@@ -16,17 +16,18 @@
     margin-top: -3%;
 }
 .spaceDivSastre{
-    height: 16rem;
+    height: 20rem;
     background-image: url("/assets/images/sastre.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 59%
 }
 .overlaySastre{
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.541);
-    padding-top: 3%;
+    background-color: rgba(0, 0, 0, 0.349);
+    padding-top: 7%;
 }
 @media(min-width:992px){
     .cascading-right {
@@ -53,5 +54,6 @@
     }
     .spaceDivSastre{
         margin-top: -15%;
+        height: 16rem;
     }
 }
