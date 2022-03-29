@@ -26,10 +26,19 @@
 .overlaySastre{
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.349);
+    background-color: rgba(0, 0, 0, 0.11);
     padding-top: 7%;
 }
+.ch:hover{
+    color: #D42930 !important;
+}
+.ch-bg:hover{
+    background-color: #D42930 !important;
+}
 @media(min-width:992px){
+    .res-Black{
+        color: white !important;
+    }
     .cascading-right {
         margin-right: -50px;
     }
@@ -37,9 +46,24 @@
     .rotate-lg-6 {
         transform: rotate(6deg);
     }
+    .davidHacherStory{
+        margin-bottom: 7%;
+    }
+    .redeSocialesDiv{
+        display: none !important;
+    }
     
 }
 @media(max-width:991px){
+    .redeSocialesDiv2{
+        display: none !important;
+    }
+    .davidHacherStory{
+        margin-bottom: -35%;
+    }
+    .res-Black{
+        color: black !important;
+    }
     .logoImageDavid{
         max-width: 48% !important;
     }
