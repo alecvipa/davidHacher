@@ -23,6 +23,9 @@
     background-size: cover;
     background-position: 50% 59%
 }
+.procesoTrabajoDiv{
+    margin-top: -6.9% !important;
+}
 .overlaySastre{
     height: 100%;
     width: 100%;
@@ -55,6 +58,12 @@
     
 }
 @media(max-width:991px){
+    .procesoTrabajoDiv{
+        margin-top: -31% !important;
+    }
+    #contacto{
+        margin-top: 16% !important;
+    }
     .redeSocialesDiv2{
         display: none !important;
     }

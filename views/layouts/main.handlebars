@@ -43,7 +43,7 @@
             };
             obj.open("post", form.action, true);
             obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
-            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value }));
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
             alert("¡En breve te contactaremos!");
             $(".formInput").val(" ");
             return false;
@@ -53,32 +53,9 @@
 
 <body class="fonts3" data-spy="scroll" data-target="#lashistaItemLandingPage" data-offset="0">
     <div class="container text-center">
-        <img src="/assets/images/davidHacheLogo.png" class="img-fluid logoImageDavid" alt="David Hacher Logo" />
+        <img src="/assets/images/davidHacheLogo.png" class="img-fluid logoImageDavid" alt="David Hacher Logo" onclick="location.href='/inicio';" />
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active ch" aria-current="page" href="/">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ch" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ch" href="#contacto">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ch" href="/privacidad">Política de privacidad</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
     <div class="bodyPrincipal">
         {{{body}}}
     </div>

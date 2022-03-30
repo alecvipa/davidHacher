@@ -1,4 +1,31 @@
 <div class="inicioDiv">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active ch" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ch" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ch" href="/trabajo">Nuestro trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ch" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ch" href="/privacidad">Política de privacidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div data-draggable="true" style="position: relative;">
         <!---->
         <!---->
@@ -41,7 +68,7 @@
                                     src="/assets/images/empresarial.jpg" class="img-fluid" alt=""
                                     aria-controls="#picker-editor"> </div>
                             <div class="card-body">
-                                <h5 class="card-title">Servicio para empresas</h5>
+                                <h5 class="card-title">Imagen corporativa</h5>
                                 <hr style="color: #D42930; height:3px;">
                                 <p class="card-text">Transmitir correctamente los valores de tu organización es
                                     importante para el desempeño que tengas en el mercado. <span
@@ -205,7 +232,7 @@
                         aria-controls="#picker-editor"></div> <!-- Background image -->
                     <div class="card mx-4 mx-md-5 shadow-5-strong"
                         style=" margin-top: -100px; background: hsla(0, 0%, 100%, 0.8); backdrop-filter: blur(30px); ">
-                        
+
                         <div class="card-body py-5 px-md-5">
                             <div class="row text-center">
                                 <h3>CONTACTA A NUESTRO EQUIPO</h3> <br> <br> <br>
@@ -237,10 +264,11 @@
                             </div>
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-6">
-                                    <form>
+                                    <form action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);">
                                         <!-- Name input -->
                                         <div class="form-outline mb-4"> <input type="text" id="form4Example1"
-                                                class="form-control"> <label class="form-label" for="form4Example1"
+                                                class="form-control formInput" name="name" required> <label
+                                                class="form-label" for="form4Example1"
                                                 style="margin-left: 0px;">Nombre</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
@@ -249,7 +277,7 @@
                                             </div>
                                         </div> <!-- Email input -->
                                         <div class="form-outline mb-4"> <input type="email" id="form4Example2"
-                                                class="form-control">
+                                                class="form-control formInput" name="email" required>
                                             <label class="form-label" for="form4Example2"
                                                 style="margin-left: 0px;">Correo electrónico</label>
                                             <div class="form-notch">
@@ -258,15 +286,24 @@
                                                 <div class="form-notch-trailing"></div>
                                             </div>
                                         </div> <!-- Message input -->
-                                        <div class="form-outline mb-4"> <textarea class="form-control"
-                                                id="form4Example3" rows="4"></textarea> <label class="form-label"
-                                                for="form4Example3" style="margin-left: 0px;">Servicio de interés</label>
+                                        <div class="form-outline mb-4"> <textarea class="form-control formInput"
+                                                id="form4Example3" rows="4" name="message" required></textarea> <label
+                                                class="form-label" for="form4Example3"
+                                                style="margin-left: 0px;">Servicio de interés</label>
                                             <div class="form-notch">
                                                 <div class="form-notch-leading" style="width: 9px;"></div>
                                                 <div class="form-notch-middle" style="width: 60px;"></div>
                                                 <div class="form-notch-trailing"></div>
                                             </div>
-                                        </div> <!-- Checkbox -->
+                                        </div>
+                                        <!-- Checkbox -->
+                                        <div class="form-check d-flex justify-content-center mb-4">
+                                            <input class="form-check-input me-2 formInput" type="checkbox" value=""
+                                                id="form2Example33" required />
+                                            <label class="form-check-label" for="form2Example33">
+                                                Acepto política de privacidad
+                                            </label>
+                                        </div>
                                         <!-- Submit button -->
                                         <button type="submit" class="btn  btn-dark btn-block"
                                             aria-controls="#picker-editor">Enviar</button>
